@@ -1,7 +1,7 @@
-The example project for StringBoot service
+The example project for String pool in Java
 
 <div align="center">
-    <img src="./assets/images/hello-world.png"/>
+    <img src="./assets/images/string_pool.png"/>
 </div>
 
 ## Getting Started
@@ -9,36 +9,25 @@ The example project for StringBoot service
 ## Project structure
 ```
 .
-├── hello-world
-│   ├── Dockerfile
+├── string-pool
+│   ├── pom.xml
 │   ...
-├── docker-compose.yaml
+├── pom.xml
 |
 └── README.md
 ```
 
-## Prerequisites
-- Make sure that you have Docker and Docker Compose installed
-  - Windows or macOS:
-    [Install Docker Desktop](https://www.docker.com/get-started)
-  - Linux: [Install Docker](https://www.docker.com/get-started) and then
-    [Docker Compose](https://github.com/docker/compose)
-
 ## Start project
-## Start project in local
-## Start project in docker 
 
-- Start project
-```console
-docker-compose up -d
+```shell
+$ mvn clean package
+$ java -jar string-pool/target/string-pool-0.0.1-SNAPSHOT.jar
 ```
 
-- Some request & test
-
-
-- Stop project
-```console
-docker-compose down
+```shell
+Compare str1==str2: true
+Compare str3==str4: false
+Compare value str1.equals(str3): true
 ```
 
 ## Contribute
